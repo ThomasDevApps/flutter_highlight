@@ -15,8 +15,8 @@ TODO: Put a short description of the package here that helps potential users
 know whether this package might be useful for them.
 
 ![Main CI](https://github.com/ThomasDevApps/flutter_highlight/actions/workflows/main.yml/badge.svg)
-![GitHub Release](https://img.shields.io/github/v/release/ThomasDevApps/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa)
-![Pub Version](https://img.shields.io/pub/v/flutter_highlight)
+![GitHub Release](https://img.shields.io/github/v/release/ThomasDevApps/flutter_highlight)
+![Pub Version](https://img.shields.io/pub/v/my_flutter_highlight)
 
 ## Features
 
