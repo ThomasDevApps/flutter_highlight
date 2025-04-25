@@ -33,33 +33,37 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: FlutterHighlight(
-          duration: Duration(milliseconds: 500),
-          color: Theme.of(context).colorScheme.primary,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Card(
-                child: Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Username'),
-                      Text(
-                        "The biography of the user is a simple bio, no... I'm joking",
-                      ),
-                    ],
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8),
+          child: FlutterHighlight(
+            duration: Duration(milliseconds: 750),
+            color: Theme.of(context).colorScheme.primary,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Card(
+                  child: Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Username'),
+                        Text(
+                          "The biography of the user is a simple bio, no... I'm joking",
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              Card(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: Text('Footer'),
+                Card(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    child: Text('Footer'),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
