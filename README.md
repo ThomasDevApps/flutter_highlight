@@ -42,6 +42,8 @@ If you'd like to see a more complex example, take a look at the example.
 
 ## Customizations
 
+Here is the list of design customizations :
+
 | Name          | Description                                             |
 |:--------------|:--------------------------------------------------------|
 | `duration`    | Duration of the animation                               |  
