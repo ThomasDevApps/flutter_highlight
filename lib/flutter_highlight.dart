@@ -60,10 +60,13 @@ class _FlutterHighlightFilter extends RenderProxyBox {
         ..shader = LinearGradient(
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
-          colors: [Colors.yellow, Colors.yellow],
+          colors: [
+            Colors.yellow.withValues(alpha: 0.6),
+            Colors.yellow.withValues(alpha: 0.6),
+          ],
         ).createShader(rect)
         ..maskRect = offset & size
-        ..blendMode = BlendMode.srcIn;
+        ..blendMode = BlendMode.srcATop;
       context.pushLayer(layer!, super.paint, offset);
     } else {
       layer = null;
