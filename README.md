@@ -23,19 +23,19 @@ Widget that highlights any other widget with an animated highlight.
   - [How use it](#how-use-it)
 - [Customizations](#-customizations)
 
-# 🔎 Demo
+## 🔎 Demo
 
 <img src="https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/improve-readme/assets/example.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
 
-# 🚀 Getting started
+## 🚀 Getting started
 
-## Install
+### Install
 
 ````yaml
 flutter pub add name_of_package
 ````
 
-## How use it
+### How use it
 
 ````dart
 FlutterHighlight(
