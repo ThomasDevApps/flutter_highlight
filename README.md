@@ -15,4 +15,10 @@ and the Flutter guide for
 ![GitHub Release](https://img.shields.io/github/v/release/ThomasDevApps/flutter_highlight)
 ![Pub Version](https://img.shields.io/pub/v/my_flutter_highlight)
 
+Widget that highlights any other widget with an animated highlight.
+
+# Demo
+
+![Demo](https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/main/assets/demo.mp4)
+
 In development.
