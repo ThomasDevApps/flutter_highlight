@@ -35,26 +35,28 @@ class FlutterHighlight extends StatefulWidget {
        assert(maxOpacity <= 1.0);
 
   @override
-  State<FlutterHighlight> createState() => _FlutterHighlightState();
+  State<FlutterHighlight> createState() => FlutterHighlightState();
 }
 
-class _FlutterHighlightState extends State<FlutterHighlight>
+@visibleForTesting
+class FlutterHighlightState extends State<FlutterHighlight>
     with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
+  @visibleForTesting
+  late AnimationController animationController;
 
   Future<void> _runAnimation() async {
     int count = 0;
     while (count < widget.blinkNumber) {
       count++;
-      await _animationController.forward();
-      await _animationController.reverse();
+      await animationController.forward();
+      await animationController.reverse();
     }
   }
 
   @override
   void initState() {
     super.initState();
-    _animationController = AnimationController(
+    animationController = AnimationController(
       vsync: this,
       duration: widget.duration,
       lowerBound: widget.minOpacity,
@@ -65,17 +67,17 @@ class _FlutterHighlightState extends State<FlutterHighlight>
 
   @override
   void dispose() {
-    _animationController.dispose();
+    animationController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: _animationController,
+      animation: animationController,
       builder: (context, child) {
         return _FlutterHighlightRender(
-          percent: _animationController.value,
+          percent: animationController.value,
           color: widget.color ?? Theme.of(context).colorScheme.surface,
           child: child,
         );
