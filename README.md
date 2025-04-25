@@ -21,6 +21,12 @@ Widget that highlights any other widget with an animated highlight.
 
 <img src="https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/improve-readme/assets/example.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
 
+## How to install
+
+````yaml
+flutter pub add name_of_package
+````
+
 ## Customizations
 
 | Name          | Description                                             |
@@ -30,5 +36,3 @@ Widget that highlights any other widget with an animated highlight.
 | `color`       | Color of the highlight                                  |
 | `minOpacity`  | Minimum opacity of the highlight                        |
 | `maxOpacity`  | Maximum opacity of the highlight                        |
-
-In development.
