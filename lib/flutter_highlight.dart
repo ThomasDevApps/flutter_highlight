@@ -39,7 +39,7 @@ class _FlutterHighlightState extends State<FlutterHighlight>
     _animationController = AnimationController(
       vsync: this,
       duration: widget.duration,
-      upperBound: 0.8,
+      upperBound: 0.6,
     );
     _runAnimation();
   }
