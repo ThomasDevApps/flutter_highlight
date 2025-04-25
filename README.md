@@ -25,7 +25,7 @@ and the Flutter guide for
 
 ## 🔎 Demo
 
-<img src="https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/main/assets/example.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
+<img src="https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/main/assets/example.gif" width="400" height="auto" alt="Flutter Highlight Demo" />
 
 ## 🚀 Getting started
 
