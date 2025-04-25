@@ -14,15 +14,25 @@ class FlutterHighlight extends StatefulWidget {
   /// Color of the highlight.
   final Color? color;
 
+  /// Minimum highlight opacity.
+  final double minOpacity;
+
+  /// Maximum highlight opacity.
+  final double maxOpacity;
+
   final Widget child;
 
   const FlutterHighlight({
     super.key,
     required this.duration,
     this.blinkNumber = 3,
+    this.minOpacity = 0.0,
+    this.maxOpacity = 0.6,
     this.color,
     required this.child,
-  });
+  }) : assert(blinkNumber >= 1),
+       assert(minOpacity >= 0.0),
+       assert(maxOpacity <= 1.0);
 
   @override
   State<FlutterHighlight> createState() => _FlutterHighlightState();
@@ -47,7 +57,8 @@ class _FlutterHighlightState extends State<FlutterHighlight>
     _animationController = AnimationController(
       vsync: this,
       duration: widget.duration,
-      upperBound: 0.6,
+      lowerBound: widget.minOpacity,
+      upperBound: widget.maxOpacity,
     );
     _runAnimation();
   }
