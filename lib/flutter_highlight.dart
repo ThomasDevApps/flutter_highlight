@@ -5,9 +5,15 @@ part 'src/flutter_highlight_filter.dart';
 part 'src/flutter_highlight_render.dart';
 
 class FlutterHighlight extends StatefulWidget {
+  /// Duration of the animation.
   final Duration duration;
+
+  /// Number of times the animation goes forward and reverse.
   final int blinkNumber;
+
+  /// Color of the highlight.
   final Color? color;
+
   final Widget child;
 
   const FlutterHighlight({
