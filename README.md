@@ -11,6 +11,8 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
+# FlutterHighlight
+
 ![Main CI](https://github.com/ThomasDevApps/flutter_highlight/actions/workflows/main.yml/badge.svg)
 ![GitHub Release](https://img.shields.io/github/v/release/ThomasDevApps/flutter_highlight)
 ![Pub Version](https://img.shields.io/pub/v/my_flutter_highlight)
