@@ -17,14 +17,25 @@ and the Flutter guide for
 
 Widget that highlights any other widget with an animated highlight.
 
-## Demo
+# Demo
 
 <img src="https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/improve-readme/assets/example.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
 
-## How to install
+# How to use
+
+## Install
 
 ````yaml
 flutter pub add name_of_package
+````
+
+## Example
+
+````dart
+FlutterHighlight(
+  duration: Duration(seconds: 1),
+  child: MyWidget()
+);
 ````
 
 ## Customizations
