@@ -5,12 +5,14 @@ import 'package:flutter/rendering.dart';
 class FlutterHighlight extends StatefulWidget {
   final Duration duration;
   final int blinkNumber;
+  final Color? color;
   final Widget child;
 
   const FlutterHighlight({
     super.key,
     required this.duration,
     this.blinkNumber = 3,
+    this.color,
     required this.child,
   });
 
@@ -55,6 +57,7 @@ class _FlutterHighlightState extends State<FlutterHighlight>
       builder: (context, child) {
         return _FlutterHighlightRender(
           percent: _animationController.value,
+          color: widget.color ?? Theme.of(context).colorScheme.surface,
           child: child,
         );
       },
@@ -68,12 +71,17 @@ class _FlutterHighlightState extends State<FlutterHighlight>
 @immutable
 class _FlutterHighlightRender extends SingleChildRenderObjectWidget {
   final double percent;
+  final Color color;
 
-  const _FlutterHighlightRender({required this.percent, required super.child});
+  const _FlutterHighlightRender({
+    required this.percent,
+    required this.color,
+    required super.child,
+  });
 
   @override
   _FlutterHighlightFilter createRenderObject(BuildContext context) {
-    return _FlutterHighlightFilter(percent);
+    return _FlutterHighlightFilter(percent, color);
   }
 
   @override
@@ -82,6 +90,7 @@ class _FlutterHighlightRender extends SingleChildRenderObjectWidget {
     _FlutterHighlightFilter filter,
   ) {
     filter.percent = percent;
+    filter.color = color;
   }
 }
 
@@ -89,8 +98,9 @@ class _FlutterHighlightRender extends SingleChildRenderObjectWidget {
 
 class _FlutterHighlightFilter extends RenderProxyBox {
   double _percent;
+  Color _color;
 
-  _FlutterHighlightFilter(this._percent);
+  _FlutterHighlightFilter(this._percent, this._color);
 
   @override
   ShaderMaskLayer? get layer => super.layer as ShaderMaskLayer?;
@@ -101,6 +111,12 @@ class _FlutterHighlightFilter extends RenderProxyBox {
   set percent(double newValue) {
     if (newValue == _percent) return;
     _percent = newValue;
+    markNeedsPaint();
+  }
+
+  set color(Color newValue) {
+    if (newValue == _color) return;
+    _color = newValue;
     markNeedsPaint();
   }
 
@@ -127,8 +143,8 @@ class _FlutterHighlightFilter extends RenderProxyBox {
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
           colors: [
-            Colors.yellow.withValues(alpha: _percent),
-            Colors.yellow.withValues(alpha: _percent),
+            _color.withValues(alpha: _percent),
+            _color.withValues(alpha: _percent),
           ],
         ).createShader(rect)
         ..maskRect = offset & size
