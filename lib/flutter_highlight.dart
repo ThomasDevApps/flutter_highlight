@@ -27,9 +27,9 @@ class _FlutterHighlightState extends State<FlutterHighlight>
   Future<void> _runAnimation() async {
     int count = 0;
     while (count < widget.blinkNumber) {
+      count++;
       await _animationController.forward();
       await _animationController.reverse();
-      count++;
     }
   }
 
