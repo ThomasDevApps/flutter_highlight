@@ -35,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: FlutterHighlight(
           duration: Duration(milliseconds: 500),
+          color: Theme.of(context).colorScheme.primary,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
