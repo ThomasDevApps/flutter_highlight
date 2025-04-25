@@ -19,6 +19,6 @@ Widget that highlights any other widget with an animated highlight.
 
 # Demo
 
-<img src="https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/improve-readme/assets/example.mp4" width="400" height="auto" alt="Flutter TypeAhead Demo" />
+<img src="https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/improve-readme/assets/example.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
 
 In development.

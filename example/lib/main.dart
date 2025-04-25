@@ -39,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
             duration: Duration(milliseconds: 750),
             color: Theme.of(context).colorScheme.primary,
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Card(
