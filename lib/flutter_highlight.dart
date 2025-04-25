@@ -43,13 +43,16 @@ class FlutterHighlightState extends State<FlutterHighlight>
     with SingleTickerProviderStateMixin {
   @visibleForTesting
   late AnimationController animationController;
+  int _repeatCount = 0;
 
-  Future<void> _runAnimation() async {
-    int count = 0;
-    while (count < widget.blinkNumber) {
-      count++;
-      await animationController.forward();
-      await animationController.reverse();
+  void statusListener(AnimationStatus status) {
+    if (status == AnimationStatus.completed) {
+      animationController.reverse();
+    } else if (status == AnimationStatus.dismissed) {
+      _repeatCount++;
+      if (_repeatCount < widget.blinkNumber) {
+        animationController.forward();
+      }
     }
   }
 
@@ -61,8 +64,9 @@ class FlutterHighlightState extends State<FlutterHighlight>
       duration: widget.duration,
       lowerBound: widget.minOpacity,
       upperBound: widget.maxOpacity,
-    );
-    _runAnimation();
+    )..addStatusListener(statusListener);
+
+    animationController.forward();
   }
 
   @override
