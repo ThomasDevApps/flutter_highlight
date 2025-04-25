@@ -17,19 +17,19 @@ and the Flutter guide for
 ![GitHub Release](https://img.shields.io/github/v/release/ThomasDevApps/flutter_highlight)
 ![Pub Version](https://img.shields.io/pub/v/my_flutter_highlight)
 
-- [Demo](#-demo)
+- [Demo](#-demonstration)
 - [Getting started](#-getting-started)
-  - [Install](#install)
+  - [How to install](#how-to-install)
   - [How use it](#how-use-it)
 - [Customizations](#-customizations)
 
-## 🔎 Demo
+## 🔎 Demonstration
 
 <img src="https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/main/assets/example.gif" width="400" height="auto" alt="Flutter Highlight Demo" />
 
 ## 🚀 Getting started
 
-### Install
+### How to install
 
 ````yaml
 flutter pub add name_of_package
