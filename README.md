@@ -17,11 +17,17 @@ and the Flutter guide for
 
 Widget that highlights any other widget with an animated highlight.
 
-# Demo
+- [Demo](#-demo)
+- [Getting started](#-getting-started)
+  - [Install](#install)
+  - [How use it](#how-use-it)
+- [Customizations](#-customizations)
+
+# 🔎 Demo
 
 <img src="https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/improve-readme/assets/example.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
 
-# How to use
+# 🚀 Getting started
 
 ## Install
 
@@ -29,7 +35,7 @@ Widget that highlights any other widget with an animated highlight.
 flutter pub add name_of_package
 ````
 
-## Example
+## How use it
 
 ````dart
 FlutterHighlight(
@@ -40,7 +46,7 @@ FlutterHighlight(
 
 If you'd like to see a more complex example, take a look at the example.
 
-## Customizations
+## 📖 Customizations
 
 Here is the list of design customizations :
 
