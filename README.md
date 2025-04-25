@@ -19,6 +19,6 @@ Widget that highlights any other widget with an animated highlight.
 
 # Demo
 
-![Demo](https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/main/assets/demo.mp4)
+![Demo](https://raw.githubusercontent.com/ThomasDevApps/flutter_highlight/improve-readme/assets/demo.mp4)
 
 In development.
